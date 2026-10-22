@@ -1,0 +1,73 @@
+{
+  "name": "Curriculum",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Display name of the document"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "junior",
+        "basic",
+        "senior",
+        "advanced",
+        "drill",
+        "awards",
+        "recruit_cycle",
+        "recruit_instructor",
+        "jls",
+        "sls",
+        "als",
+        "ym_classes",
+        "leadership",
+        "training",
+        "forms",
+        "reference",
+        "resource",
+        "other"
+      ],
+      "description": "Which guidebook, manual or resource group this document belongs to"
+    },
+    "description": {
+      "type": "string",
+      "description": "Optional note about edition, revision date or contents"
+    },
+    "audience": {
+      "type": "string",
+      "description": "Optional audience tag (e.g. All, Junior, Senior, Adults, Cadre) shown on the resource card"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "Public URL of the uploaded file"
+    },
+    "file_name": {
+      "type": "string",
+      "description": "Original file name"
+    }
+  },
+  "required": [
+    "title",
+    "category",
+    "file_url"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

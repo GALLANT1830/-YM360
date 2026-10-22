@@ -1,0 +1,59 @@
+{
+  "name": "Advice",
+  "type": "object",
+  "properties": {
+    "category": {
+      "type": "string",
+      "description": "Topic grouping shown above the question (e.g. Study strategies, Leadership, Board practice)"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "verified",
+        "supplemental"
+      ],
+      "description": "verified = cites supplied manuals; supplemental = YM360 study suggestion"
+    },
+    "reference": {
+      "type": "string",
+      "description": "Source citation shown under the answer (e.g. Awards Manual p. 80)"
+    },
+    "question": {
+      "type": "string",
+      "description": "The question text"
+    },
+    "answer": {
+      "type": "string",
+      "description": "The answer text"
+    },
+    "order": {
+      "type": "number",
+      "default": 0,
+      "description": "Sort order; lower appears first"
+    }
+  },
+  "required": [
+    "category",
+    "question",
+    "answer",
+    "source"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

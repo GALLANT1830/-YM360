@@ -1,0 +1,70 @@
+{
+  "name": "SiteContent",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "Unique content key, e.g. home_hero_title"
+    },
+    "section": {
+      "type": "string",
+      "description": "Grouping label for the admin editor, e.g. Home, About, Home layout"
+    },
+    "label": {
+      "type": "string",
+      "description": "Human-readable label shown in the admin editor"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "text",
+        "longtext",
+        "image",
+        "section"
+      ],
+      "default": "text",
+      "description": "text/longtext = editable copy; image = uploaded photo; section = a toggleable page section"
+    },
+    "value": {
+      "type": "string",
+      "description": "Text content for text/longtext blocks"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Public URL of the uploaded image for image blocks"
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether a section block is shown on the page"
+    },
+    "order": {
+      "type": "number",
+      "default": 0,
+      "description": "Display order; lower appears first"
+    }
+  },
+  "required": [
+    "key",
+    "label",
+    "type"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

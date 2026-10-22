@@ -1,0 +1,41 @@
+{
+  "name": "Ribbon",
+  "type": "object",
+  "properties": {
+    "ribbon_no": {
+      "type": "string",
+      "description": "The ribbon number from the Awards Manual (e.g. 3606) that this image belongs to"
+    },
+    "award_name": {
+      "type": "string",
+      "description": "Name of the award this ribbon image represents"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Public URL of the uploaded ribbon image"
+    }
+  },
+  "required": [
+    "ribbon_no",
+    "award_name",
+    "image_url"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
