@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 214 33% 97%;
+    --foreground: 213 65% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 213 65% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 65% 11%;
+    --primary: 350 96% 43%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 213 65% 11%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 214 32% 91%;
+    --muted-foreground: 215 22% 32%;
+    --accent: 40 46% 56%;
+    --accent-foreground: 213 65% 11%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 28% 85%;
+    --input: 214 28% 85%;
+    --ring: 350 96% 43%;
+    --chart-1: 350 96% 43%;
+    --chart-2: 213 65% 11%;
+    --chart-3: 40 46% 56%;
+    --chart-4: 215 22% 45%;
+    --chart-5: 214 32% 70%;
+    --radius: 0.375rem;
+    --navy: 213 65% 11%;
+    --gold: 40 46% 56%;
+    --charcoal: 0 0% 7%;
+    --font-heading: 'Barlow Condensed', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Barlow Condensed', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --sidebar-background: 213 65% 11%;
+    --sidebar-foreground: 214 32% 91%;
+    --sidebar-primary: 350 96% 43%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 213 50% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 213 40% 20%;
+    --sidebar-ring: 350 96% 43%;
+  }
+
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 214 32% 91%;
+    --card: 0 0% 10%;
+    --card-foreground: 214 32% 91%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 214 32% 91%;
+    --primary: 350 96% 43%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 214 32% 91%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 214 20% 70%;
+    --accent: 40 46% 56%;
+    --accent-foreground: 0 0% 7%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 40 46% 56%;
+    --chart-1: 350 96% 43%;
+    --chart-2: 40 46% 56%;
+    --chart-3: 214 32% 91%;
+    --chart-4: 215 22% 45%;
+    --chart-5: 214 32% 70%;
+    --sidebar-background: 213 65% 11%;
+    --sidebar-foreground: 214 32% 91%;
+    --sidebar-primary: 350 96% 43%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 213 50% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 213 40% 20%;
+    --sidebar-ring: 350 96% 43%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-heading tracking-wide;
+    line-height: 1.15;
+  }
+}
+
+@layer components {
+  .kicker {
+    @apply font-heading text-sm font-semibold uppercase tracking-[0.18em] text-primary;
+  }
+}
